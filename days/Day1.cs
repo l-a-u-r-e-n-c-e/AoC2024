@@ -20,6 +20,16 @@ public class Day1 : Day
         return totalDistance;
     }
 
+    public int Part2()
+    {
+        var similarityScore = 0;
+        foreach (var number in _leftList)
+        {
+            similarityScore += number * getDuplicateCount(number, _rightList);
+        }
+        return similarityScore;
+    }
+
     private (List<int>, List<int>) processInput(string input)
     {
         var leftList = new List<int>();
@@ -38,5 +48,15 @@ public class Day1 : Day
         leftList.Sort();
         rightList.Sort();
         return (leftList, rightList);
+    }
+
+    private int getDuplicateCount(int number, List<int> compareList)
+    {
+        var duplicateCount = 0;
+        foreach (var item in compareList)
+        {
+           duplicateCount += item == number ? 1 : 0; 
+        }
+        return duplicateCount;
     }
 }
