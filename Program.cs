@@ -17,3 +17,5 @@ var part1Answer = day1.Part1();
 var part2Answer = day1.Part2();
 
 Console.WriteLine($"The answer to Day 1 Part 1 is {part1Answer} and the answer to Part 2 is {part2Answer}");
+
+// Day 2
