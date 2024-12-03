@@ -1,4 +1,4 @@
-using AoC2024.days;
+﻿using AoC2024.days;
 using Microsoft.Extensions.Configuration;
 
 // Setup
@@ -10,3 +10,9 @@ var configuration = new ConfigurationBuilder()
     .Build();
 var inputBaseFilePath = configuration["inputFileBasePath"];
 
+
+// Day 1
+var day1 = new Day1($"{inputBaseFilePath}/{configuration["days:day1:inputFileName"]}");
+var part1Answer = day1.Part1();
+
+Console.WriteLine($"The answer to Day 1 Part 1 is {part1Answer}");
