@@ -4,9 +4,9 @@ namespace AoC2024.days;
 
 public class Day
 {
-    private string _input;
+    public string Input { get; private set; }
     public Day(string inputFilePath)
     {
-        _input = InputHandler.GetInput(inputFilePath);
+        Input = InputHandler.GetInput(inputFilePath);
     }
 }
