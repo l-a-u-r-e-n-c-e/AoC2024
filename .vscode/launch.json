@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Sample Input",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}\\AoC2024.csproj",
+            "launchConfigurationId": "TargetFramework=;Sample Input"
+        },
+        {
+            "name": "My Puzzle Input",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}\\AoC2024.csproj",
+            "launchConfigurationId": "TargetFramework=;My Puzzle Input"
+        }
+    ]
+}
