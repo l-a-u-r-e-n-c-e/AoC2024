@@ -8,6 +8,5 @@ public class Day
     public Day(string inputFilePath)
     {
         _input = InputHandler.GetInput(inputFilePath);
-        Console.WriteLine(_input);
     }
 }
