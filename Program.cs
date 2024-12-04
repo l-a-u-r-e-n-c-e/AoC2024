@@ -21,6 +21,6 @@ Console.WriteLine($"The answer to Day 1 Part 1 is {d1p1Answer} and the answer to
 // Day 2
 var day2 = new Day2($"{inputBaseFilePath}/{configuration["days:day2:inputFileName"]}");
 var d2p1Answer = day2.Part1();
-var d2p2Answer = "not implemented yet.";
+var d2p2Answer = day2.Part2();
 
 Console.WriteLine($"The answer to Day 2 Part 1 is {d2p1Answer} and the answer to Part 2 is {d2p2Answer}");
