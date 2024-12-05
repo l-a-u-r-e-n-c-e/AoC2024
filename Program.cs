@@ -24,3 +24,9 @@ var d2p1Answer = day2.Part1();
 var d2p2Answer = day2.Part2();
 
 Console.WriteLine($"The answer to Day 2 Part 1 is {d2p1Answer} and the answer to Part 2 is {d2p2Answer}");
+
+// Day 3
+var day3 = new Day3($"{inputBaseFilePath}/{configuration["days:day3:inputFileName"]}");
+var d3p1Answer = day3.Part1();
+
+Console.WriteLine($"The answer to Day 3 Part 1 is {d3p1Answer} and the answer to Part 2 is not implemented");
