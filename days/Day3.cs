@@ -11,11 +11,7 @@ public class Day3 : Day
         var result = 0;
         for(int i = 0; i < Input.Length; i++)
         {
-            var isMullPrefix = Input[i] == 109 // m
-                && Input[i+1] == 117 // u 
-                && Input[i+2] == 108 // l
-                && Input[i+3] == 40; // (
-            if (!isMullPrefix) { continue; }
+            if (!isMulPrefix(i)) { continue; }
 
             var multiplicandLastIndex = getLastIndex(i, 4, ',');
             if (multiplicandLastIndex == 0) { continue; }
@@ -34,18 +30,25 @@ public class Day3 : Day
 
         return result;
     }
-     private int getLastIndex(int i, int offset, char validTerminator)
-     {
-        char terminator = new();
-        var isNumber = Input[i+offset] >= 48 && Input[i+offset] <= 57;
-        while(isNumber)
-        {
-            offset++;
-            isNumber = Input[i+offset] >= 48 && Input[i+offset] <= 57;
-            terminator = Input[i+offset];
-        }
+    private bool isMulPrefix(int i)
+    {
+        return Input[i] == 'm'
+            && Input[i+1] == 'u'
+            && Input[i+2] == 'l'
+            && Input[i+3] == '(';
+    }
+    private int getLastIndex(int i, int offset, char validTerminator)
+    {
+    char terminator = new();
+    var isNumber = Input[i+offset] >= 48 && Input[i+offset] <= 57;
+    while(isNumber)
+    {
+        offset++;
+        isNumber = Input[i+offset] >= 48 && Input[i+offset] <= 57;
+        terminator = Input[i+offset];
+    }
 
-        if (terminator != validTerminator) { return 0; }
-        return i+offset-1;
-     }
+    if (terminator != validTerminator) { return 0; }
+    return i+offset-1;
+    }
 }
