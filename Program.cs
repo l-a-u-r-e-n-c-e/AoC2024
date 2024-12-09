@@ -1,4 +1,5 @@
-using AoC2024.days;
+﻿using AoC2024.days;
+using AoC2024.utilities;
 using Microsoft.Extensions.Configuration;
 
 // Setup
@@ -30,3 +31,10 @@ var d3p1Answer = day3.Part1();
 var d3p2Answer = day3.Part2();
 
 Console.WriteLine($"The answer to Day 3 Part 1 is {d3p1Answer} and the answer to Part 2 is {d3p2Answer}");
+
+// Day 4
+var day4 = new Day4(inputHandler.GenerateInputPath(4));
+var d4p1Answer = day4.Part1();
+var d4p2Answer = day4.Part2();
+
+Console.WriteLine($"The answer to Day 4 Part 1 is {d4p1Answer} and the answer to Part 2 is {d4p2Answer}");
